@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>  
+.body{
+    margin: 35px;
+    padding: 16%;
+    background-color: #218838;
+    justify-content: center;
+    text-align: center;
+
+}
+.confirmation-message {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .cancel-link {
+    text-decoration: none;
+    color: #007bff; /* blue color */
+    margin-right: 10px;
+  }
+  
+  .cancel-link:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+  
+  /* Styling the submit button */
+  .confirm-button {
+    background-color: #28a745; /* green color */
+    color: #fff; /* white color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .confirm-button:hover {
+    background-color: #0d100e; /* darker green on hover */
+  }
+  
+
+</style>
+<div class="body">
+    <p class="confirmation-message">Are you sure you want to delete "{{item}}" ? </p>
+    <a class="cancel-link" href="{% url 'list' %}">Cancel</a>
+    <form method="post" action="">
+        {% csrf_token %}
+    <input type="submit" name="Confirm" class="confirm-button">
+</form>
+</div>
