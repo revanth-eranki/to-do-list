@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    /* Style for the form container */
+.form-container {
+    max-width: 400px;
+    background-color: white;
+    margin: 0 auto;
+  }
+  
+  /* Style for the heading */
+  .form-heading {
+    font-size: large;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for form fields */
+  .form-field {
+    margin-bottom: 15px;
+  }
+  
+  /* Style for labels */
+  .form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Style for input fields */
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for submit button */
+  .form-submit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* blue color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style for submit button on hover */
+  .form-submit:hover {
+    background-color: #0056b3; /* darker blue on hover */
+  }
+  
+</style>
+
+<div class="form-container">
+    <h3 class="form-heading">Update Task</h3>
+    <div class="form-field">
+        <form class="form-input" method="POST" action="">
+            {% csrf_token %}
+            {{form}}
+            <input class="form-submit" type="submit" name = 'Update task'>
+        </form>
+
+    </div>
+    
+</div>
